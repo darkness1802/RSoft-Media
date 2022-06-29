@@ -1,4 +1,4 @@
-import { server } from "./functions/api.js"
+import { server } from "./api.js"
 import { Server } from "socket.io"
 
 var io = new Server(server, {
@@ -32,4 +32,5 @@ io.on('connection', (socket) => {
 })
 
 const PORT = process.env.PORT || 8888
+
 server.listen(PORT, () => console.log(`Server is running on :: http://localhost:8888`))

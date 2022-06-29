@@ -1,15 +1,15 @@
-import "../root.js"
+import "./root.js"
 import express from 'express'
 import http from 'http'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import serverless from 'serverless-http'
 import os from "os"
-import DBConnect from "../database/index.js"
+import DBConnect from "./database/index.js"
 
-import audio from '../routes/audio.route.js'
-import video from '../routes/video.route.js'
-import user from '../routes/user.route.js'
+import audio from './routes/audio.route.js'
+import video from './routes/video.route.js'
+import user from './routes/user.route.js'
 
 export const app = express()
 export const server = http.createServer(app)
